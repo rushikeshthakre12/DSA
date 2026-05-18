@@ -1,31 +1,26 @@
-#Linear search
+#Binary search is faster than linear search
+#Binary search only works for sorted arrays
+#Half of the remaining elements can be eliminated at a time, instead of eliminating them one by one
 
-def binary_search(n, arr, target):
-    flag = False
-    low=0
-    high=n-1
-    while low<=high:
-        mid=(low+high)//2
-        if target==arr[mid]:
-            flag=True
-            loc=mid
-            break
-        elif arr[mid]>target:
-            high=mid-1
-        elif arr[mid]<target:
-            low=mid+1
+# def binarySearch(array,target):
+#     low=0
+#     high = len(array)-1
+#     while low <= high:
+#         mid = (low+high)//2 #floor division operator
+#         if array[mid]==target:
+#             return mid
+#         elif array[mid]<target:
+#             low = mid + 1
+#         else:
+#             high = mid - 1
+#     return -1
 
-    if flag == True:
-        print("Search is successful and present at", loc)
-    else:
-        print("Search is unsuccessful")
+# array = [2, 4, 5, 9, 11, 13, 14, 15, 19, 20, 22, 23, 27, 30, 32, 39, 42, 44, 45, 49, 51, 53, 54, 55, 59, 60, 62, 63, 67, 70, 72, 79]
+# target = 72
+# result = binarySearch(array, target)
+# if result == -1:
+#     print("Element not found")
+# else: 
+#     print("Element found at: ",target)
 
-if __name__ == '__main__':
-    n = int(input("Enter size: "))
-    arr = []
-    for i in range(n):
-        arr.append(int(input()))
-    target = int(input("Enter no which is to be search: "))
-    binary_search(n, arr, target)
 
-    
