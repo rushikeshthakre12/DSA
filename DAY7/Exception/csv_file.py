@@ -16,13 +16,13 @@
 import csv
 f = open("student.csv", 'a', newline='')
 a = csv.writer(f)
-a.writerow(["studID", "studName", "Phy","Chem","Math","Total","Percentage","Result"])
+# a.writerow(["studID", "studName", "Phy","Chem","Math","Total","Percentage","Result"])
 studID=int(input("Enter your stuid :"))
 studName=input("Enter  studName :")
 Phy = int(input("Enter Phy Marks :"))
 Chem = int(input("Enter Chem Marks :"))
 Math = int(input("Enter Math Marks :"))
-if phy>=40 and Chem>=40 and Math>=40:
+if Phy>=40 and Chem>=40 and Math>=40:
     Result = "Pass"
     print("You are Pass")
 else:
